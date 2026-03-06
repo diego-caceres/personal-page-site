@@ -69,7 +69,7 @@ const events: TimelineEvent[] = [
   {
     year: '2015',
     title: 'Independencia',
-    description: 'Me mudé con mi pareja. Primer departamento propio. IKEA, muebles imposibles de armar y mucho café.',
+    description: 'Me mudé fuera de la casa de mis padres, primer hogar, vida adulta en primera persona.',
     Icon: RiHome2Line,
     color: '#ec4899',
     category: 'personal',

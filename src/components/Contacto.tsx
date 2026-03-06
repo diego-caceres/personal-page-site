@@ -13,19 +13,19 @@ import {
 const socialLinks = [
   {
     name: 'GitHub',
-    url: 'https://github.com/diegocaceres',
+    url: 'https://github.com/diego-caceres',
     Icon: RiGithubLine,
     color: '#7c3aed',
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/diegocaceres',
+    url: 'https://linkedin.com/in/diego-caceres-galvan',
     Icon: RiLinkedinLine,
     color: '#0891b2',
   },
   {
     name: 'Email',
-    url: 'mailto:hola@diegocaceres.dev',
+    url: 'mailto:diegocaceresgalvan@gmail.com',
     Icon: RiMailLine,
     color: '#ec4899',
   },
@@ -37,7 +37,7 @@ export default function Contacto() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = async () => {
-    await navigator.clipboard.writeText('hola@diegocaceres.dev');
+    await navigator.clipboard.writeText('diegocaceresgalvan@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -111,7 +111,7 @@ export default function Contacto() {
               </p>
               <div className="flex items-center justify-center gap-3 flex-wrap">
                 <a
-                  href="mailto:hola@diegocaceres.dev"
+                  href="mailto:diegocaceresgalvan@gmail.com"
                   className="text-2xl md:text-3xl font-bold transition-opacity hover:opacity-80"
                   style={{
                     background: 'linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2))',
@@ -120,7 +120,7 @@ export default function Contacto() {
                     backgroundClip: 'text',
                   }}
                 >
-                  hola@diegocaceres.dev
+                  diegocaceresgalvan@gmail.com
                 </a>
                 <button
                   onClick={copyEmail}
