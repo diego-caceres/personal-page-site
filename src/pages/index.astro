@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import SobreMi from '../components/SobreMi';
+import Habilidades from '../components/Habilidades';
+import Proyectos from '../components/Proyectos';
+import Timeline from '../components/Timeline';
+import Contacto from '../components/Contacto';
+---
+
+<Layout>
+  <Navbar client:load />
+  <main>
+    <Hero client:load />
+    <SobreMi client:visible />
+    <Habilidades client:visible />
+    <Proyectos client:visible />
+    <Timeline client:visible />
+    <Contacto client:visible />
+  </main>
+</Layout>
