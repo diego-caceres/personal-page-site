@@ -26,7 +26,7 @@ const projects: Project[] = [
   {
     name: 'Activity Tracker',
     description:
-      'App personal para gestionar todos, hábitos y notas. Minimalista, rápida, siempre disponible.',
+      'App personal para gestionar ToDos, hábitos y notas. Minimalista, rápida, siempre disponible.',
     stack: ['Next.js', 'TypeScript', 'Upstash Redis', 'Tailwind CSS'],
     Icon: RiCheckboxLine,
     gradient: 'linear-gradient(135deg, #7c3aed, #db2777)',
@@ -38,11 +38,13 @@ const projects: Project[] = [
     stack: ['React', 'Vite', 'TypeScript', 'Tailwind CSS'],
     Icon: MdOutlinePool,
     gradient: 'linear-gradient(135deg, #0891b2, #3b82f6)',
+    url: 'https://aida-uy.vercel.app/',
+    repo: 'https://github.com/diego-caceres/aua-website',
   },
   {
-    name: 'Integral Surf Site',
+    name: 'Integral Surf',
     description:
-      'Sitio completo para una escuela de surf: reservas, galería de fotos, información de cursos y clases.',
+      'Sitio web completo para una agencia de viajes de surf: información de viajes, galería de fotos, experiencias, y contacto.',
     stack: ['Next.js', 'Supabase', 'Cloudinary', 'TypeScript'],
     Icon: GiSurfBoard,
     gradient: 'linear-gradient(135deg, #0d9488, #0891b2)',
@@ -50,26 +52,30 @@ const projects: Project[] = [
   {
     name: 'Master Sales Site',
     description:
-      'E-commerce mayorista bilingüe (ES/EN) con catálogo, carrito y gestión de pedidos. Full-stack completo.',
+      'Sitio de identidad de marca para mayorista, con catálogo de productos y backoffice para su gestión. Full-stack completo.',
     stack: ['Next.js', 'Neon', 'Cloudinary', 'TypeScript'],
     Icon: RiShoppingCart2Line,
     gradient: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+    url: 'https://www.mastersales.com.uy/',
   },
   {
     name: 'Ranking',
     description:
-      'Tracker de Elo para juegos de mesa. Registra partidas, calcula rating ELO y muestra historial por jugador.',
+      'Tracker de Elo para el juego de mesa Terraforming Mars. Registra partidas, calcula rating ELO y muestra historial por jugador. Proyecto open source para mis amigos.',
     stack: ['React', 'Vite', 'Upstash Redis', 'TypeScript'],
     Icon: RiBarChartLine,
     gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
+    repo: 'https://github.com/diego-caceres/terraforming-mars-ranking',
+    url: 'https://terraforming-mars-ranking.vercel.app/',
   },
   {
     name: 'Portfolio Belén Villegas Pla',
     description:
-      'Portfolio artístico con múltiples diseños intercambiables. Experiencia visual cuidada para una artista plástica.',
+      'Portfolio personal para una investigadora de economía política. Diseño elegante con énfasis en su trabajo académico y publicaciones.',
     stack: ['React', 'Vite', 'TypeScript', 'CSS Modules'],
     Icon: RiBrushLine,
     gradient: 'linear-gradient(135deg, #ec4899, #f97316)',
+    url: 'https://belen-villegas-pla.vercel.app/about',
   },
 ];
 
@@ -197,7 +203,7 @@ export default function Proyectos() {
             </span>
           </h2>
           <p className="text-base max-w-lg mx-auto" style={{ color: 'var(--color-muted)' }}>
-            Proyectos personales y de clientes. Cada uno con su propio stack, sus propios
+            Algunos proyectos personales y de clientes freelance. Cada uno con su propio stack, sus propios
             desafíos y sus propias historias.
           </p>
         </motion.div>

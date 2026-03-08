@@ -78,9 +78,9 @@ export default function Hero() {
             className="text-xl md:text-2xl font-light mb-6 tracking-wide"
             style={{ color: 'var(--color-muted)' }}
           >
-            Ingeniería de sistemas /{' '}
+            Ingeniero en sistemas /{' '}
             <span style={{ color: 'var(--color-text)' }} className="font-medium">
-              Desarrollo web
+              Desarrollador fullstack
             </span>
           </motion.p>
 
@@ -93,7 +93,7 @@ export default function Hero() {
             className="text-base md:text-lg mb-10 max-w-xl leading-relaxed"
             style={{ color: 'var(--color-muted)' }}
           >
-            Construyo cosas para la web con ganas y cuidado. Desde Montevideo,
+            Construyo soluciones en la web para humanos, sistemas robustos donde la facilidad de uso, y la practicidad son importantes. Desde Montevideo,
             Uruguay — entre commits, olas y maullidos.
           </motion.p>
 

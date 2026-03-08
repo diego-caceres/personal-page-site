@@ -187,7 +187,7 @@ export default function Contacto() {
             className="text-center text-xs mt-10"
             style={{ color: 'var(--color-muted)' }}
           >
-            Hecho con Astro, React y Tailwind CSS — desde Montevideo
+            Hecho con Astro, React y Tailwind CSS — desde Montevideo y con ayuda de Claude Code
           </motion.p>
         </div>
       </div>

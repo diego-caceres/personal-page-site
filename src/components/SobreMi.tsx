@@ -11,12 +11,12 @@ import { PiCat } from 'react-icons/pi';
 import { GiWaveSurfer } from 'react-icons/gi';
 
 const interests = [
-  { icon: <GiWaveSurfer />, label: 'Surf' },
   { icon: <PiCat />, label: 'Gatos' },
   { icon: <RiGithubLine />, label: 'Open Source' },
+  { icon: <GiWaveSurfer />, label: 'Surf' },
   { icon: <RiMapPin2Line />, label: 'Uruguay' },
   { icon: <RiGamepadLine />, label: 'Juegos de mesa' },
-  { icon: <RiBookOpenLine />, label: 'Cultura libre' },
+  { icon: <RiBookOpenLine />, label: 'Justicia social y ambiental' },
 ];
 
 export default function SobreMi() {
@@ -24,9 +24,9 @@ export default function SobreMi() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="sobre-mi" className="py-24 md:py-32" ref={ref}>
+    <section id="sobre-mi" className="pt-12 pb-24 md:pt-16 md:pb-32" ref={ref}>
       <div className="section-container">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -47,10 +47,11 @@ export default function SobreMi() {
             </div>
 
             <h2
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
+              className="text-3xl md:text-4xl font-bold mb-6 leading-tight"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              Ingeniero{' '}
+              Construyendo software
+              <br />
               <span
                 style={{
                   background: 'linear-gradient(135deg, var(--color-accent-2), var(--color-accent-3))',
@@ -59,7 +60,7 @@ export default function SobreMi() {
                   backgroundClip: 'text',
                 }}
               >
-                de verdad.
+                desde hace más de una década.
               </span>
             </h2>
 
@@ -70,16 +71,16 @@ export default function SobreMi() {
               <p>
                 Soy Diego, ingeniero en sistemas egresado de la ORT Uruguay. Llevo más de una
                 década construyendo cosas para la web — desde sistemas internos hasta productos
-                que usan miles de personas.
+                que usan gran cantidad de clientes.
               </p>
               <p>
-                Me gusta el trabajo bien hecho: código limpio, interfaces que se sienten bien,
-                y equipos donde la gente se habla de verdad. Hoy trabajo como Software Engineer
-                en una empresa internacional, desde Montevideo.
+                Me gusta el trabajo bien hecho: código limpio, arquitecturas de sistemas que se sienten bien,
+                y equipos donde la gente colabora de verdad. Hoy trabajo como Software Engineer
+                para una empresa internacional, desde Montevideo.
               </p>
               <p>
                 Cuando no estoy frente a una pantalla, estoy en el agua intentando surfear olas
-                que se me van, o en casa con Frida y Ada —mis dos gatas—.
+                que se me van, disfrutando tiempo con mis amistades, o en casa con Frida y Ada —mis dos gatas y verdaderas jefas—.
               </p>
             </div>
 
