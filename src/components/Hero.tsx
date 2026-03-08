@@ -25,6 +25,25 @@ export default function Hero() {
         style={{ background: 'radial-gradient(circle, var(--color-accent-3), transparent)' }}
       />
 
+      {/* Scroll hint — pinned to bottom */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
+        style={{ color: 'var(--color-muted)' }}
+      >
+        <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+          </svg>
+        </motion.div>
+      </motion.div>
+
       <div className="section-container relative z-10 py-32 pt-40">
         <div className="max-w-3xl">
           {/* Greeting */}
@@ -154,24 +173,6 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Scroll hint */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="mt-20 flex items-center gap-2"
-            style={{ color: 'var(--color-muted)' }}
-          >
-            <motion.div
-              animate={{ y: [0, 6, 0] }}
-              transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-              </svg>
-            </motion.div>
-            <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
-          </motion.div>
         </div>
       </div>
     </section>

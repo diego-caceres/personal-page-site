@@ -84,7 +84,7 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
     <motion.article
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
+      viewport={{ once: true, amount: 0 }}
       transition={{ duration: 0.5, delay: idx * 0.08 }}
       whileHover={{ y: -6 }}
       className="group relative rounded-2xl border overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col"

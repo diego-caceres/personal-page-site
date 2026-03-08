@@ -104,14 +104,15 @@ export default function SobreMi() {
             transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
             className="flex flex-col gap-6"
           >
-            {/* Avatar placeholder */}
-            <div
-              className="relative w-48 h-48 mx-auto rounded-2xl overflow-hidden flex items-center justify-center"
-              style={{
-                background: 'linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2))',
-              }}
-            >
-              <GiWaveSurfer className="w-24 h-24 text-white opacity-80" />
+            {/* Avatar */}
+            <div className="relative w-56 h-72 mx-auto">
+              <div className="w-56 h-72 rounded-2xl overflow-hidden" style={{ border: '2px solid var(--color-border)' }}>
+                <img
+                  src="/images/C47B4307-6FD0-4464-B1AE-F57A698556EC.JPG"
+                  alt="Diego Cáceres"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
               <div
                 className="absolute -bottom-1 -right-1 w-14 h-14 rounded-full border-4 flex items-center justify-center"
                 style={{ backgroundColor: 'var(--color-card)', borderColor: 'var(--color-bg)' }}

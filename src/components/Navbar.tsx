@@ -26,6 +26,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    setTimeout(() => {
+      const target = document.querySelector(href);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  };
+
   const toggleDark = () => {
     const next = !isDark;
     setIsDark(next);
@@ -122,7 +131,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, link.href)}
                   className="text-sm font-medium py-1 opacity-70 hover:opacity-100 transition-opacity"
                   style={{ color: 'var(--color-text)' }}
                 >
