@@ -7,9 +7,35 @@ interface Props {
 }
 
 const {
-  title = 'Diego Cáceres — Ingeniero en Sistemas',
-  description = 'Ingeniero en Sistemas uruguayo. Desarrollo web, surf, gatos y cultura libre.',
+  title = 'Diego Cáceres — Software Engineer',
+  description = 'Software Engineer uruguayo con más de 10 años construyendo para la web. Especialista en React, TypeScript y arquitecturas frontend y backend. Basado en Montevideo, Uruguay.',
 } = Astro.props;
+
+const siteUrl = 'https://diegocaceres.dev';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Diego Cáceres',
+  url: siteUrl,
+  email: 'hola@diegocaceres.dev',
+  jobTitle: 'Software Engineer',
+  description,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Montevideo',
+    addressCountry: 'UY',
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'ORT Uruguay',
+  },
+  sameAs: [
+    'https://github.com/diegocaceres',
+    'https://linkedin.com/in/diegocaceres',
+  ],
+};
 ---
 
 <!doctype html>
@@ -17,9 +43,34 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary -->
+    <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Diego Cáceres" />
-    <title>{title}</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="es_UY" />
+    <meta property="og:site_name" content="Diego Cáceres" />
+    <meta property="og:image" content={`${siteUrl}/og-image.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Diego Cáceres — Software Engineer" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

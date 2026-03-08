@@ -52,7 +52,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="font-mono text-sm font-medium" style={{ color: 'var(--color-accent-1)' }}>
-            dc<span style={{ color: 'var(--color-accent-2)' }}>.</span>dev
+            diegocaceres<span style={{ color: 'var(--color-accent-2)' }}>.</span>dev
           </a>
 
           {/* Desktop nav */}

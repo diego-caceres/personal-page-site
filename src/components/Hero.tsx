@@ -94,7 +94,7 @@ export default function Hero() {
             style={{ color: 'var(--color-muted)' }}
           >
             Construyo soluciones en la web para humanos, sistemas robustos donde la facilidad de uso, y la practicidad son importantes. Desde Montevideo,
-            Uruguay — entre commits, olas y maullidos.
+            Uruguay — entre commits, mate, olas y maullidos.
           </motion.p>
 
           {/* Links */}
