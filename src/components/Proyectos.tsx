@@ -203,8 +203,8 @@ export default function Proyectos() {
             </span>
           </h2>
           <p className="text-base max-w-lg mx-auto" style={{ color: 'var(--color-muted)' }}>
-            Algunos proyectos personales y de clientes freelance. Cada uno con su propio stack, sus propios
-            desafíos y sus propias historias.
+            Algunos proyectos personales y de clientes freelance. Cada uno con su propio stack, y sus propios
+            desafíos.
           </p>
         </motion.div>
 

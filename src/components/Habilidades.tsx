@@ -16,7 +16,7 @@ const categories: SkillCategory[] = [
     title: 'Frontend',
     gradient: 'linear-gradient(135deg, #7c3aed, #db2777)',
     Icon: RiLayoutLine,
-    skills: ['React', 'Next.js', 'Astro', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Framer Motion'],
+    skills: ['React', 'Next.js', 'Astro', 'TypeScript', 'JavaScript', 'Tailwind CSS', ],
   },
   {
     title: 'Backend & Datos',
@@ -28,13 +28,13 @@ const categories: SkillCategory[] = [
     title: 'Infra & DevOps',
     gradient: 'linear-gradient(135deg, #f59e0b, #ef4444)',
     Icon: RiCloudLine,
-    skills: ['Kubernetes', 'Docker', 'Vercel', 'CI/CD', 'Git'],
+    skills: ['Vercel', 'Docker', 'Kubernetes', 'CI/CD', 'Git'],
   },
   {
     title: 'Herramientas',
     gradient: 'linear-gradient(135deg, #10b981, #3b82f6)',
     Icon: RiToolsLine,
-    skills: ['Vite', 'ESLint', 'Cloudinary', 'Nodemailer', 'hCaptcha'],
+    skills: ['Vite', 'ESLint', 'Prettier', 'Figma', 'Notion'],
   },
 ];
 
@@ -139,8 +139,7 @@ export default function Habilidades() {
             </span>
           </h2>
           <p className="text-base max-w-lg mx-auto" style={{ color: 'var(--color-muted)' }}>
-            Herramientas que conozco bien y uso a diario. No barras de porcentaje —
-            estas tecnologías realmente son parte de mi trabajo.
+            Herramientas y tecnologías con las que suelo trabajar en mis proyectos personales y profesionales.
           </p>
         </motion.div>
 

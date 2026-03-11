@@ -110,9 +110,9 @@ export default function Contacto() {
                 Escribime a
               </p>
               <div className="flex items-center justify-center gap-3 flex-wrap">
-                <a
-                  href="mailto:diegocaceresgalvan@gmail.com"
-                  className="text-2xl md:text-3xl font-bold transition-opacity hover:opacity-80"
+                <button
+                  onClick={copyEmail}
+                  className="text-2xl md:text-3xl font-bold transition-opacity hover:opacity-80 text-center cursor-pointer"
                   style={{
                     background: 'linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2))',
                     WebkitBackgroundClip: 'text',
@@ -120,8 +120,8 @@ export default function Contacto() {
                     backgroundClip: 'text',
                   }}
                 >
-                  diegocaceresgalvan@gmail.com
-                </a>
+                  diegocaceresgalvan<wbr />@gmail.com
+                </button>
                 <button
                   onClick={copyEmail}
                   aria-label="Copiar email"
