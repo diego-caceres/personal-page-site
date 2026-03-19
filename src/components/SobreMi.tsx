@@ -124,7 +124,7 @@ export default function SobreMi() {
                   <motion.span
                     key={item.label}
                     whileHover={{ scale: 1.08, rotate: 1 }}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border transition-all duration-200 cursor-default"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border cursor-default"
                     style={{
                       backgroundColor: 'var(--color-card)',
                       borderColor: 'var(--color-border)',

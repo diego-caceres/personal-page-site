@@ -87,7 +87,7 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
       viewport={{ once: true, amount: 0 }}
       transition={{ duration: 0.5, delay: idx * 0.08 }}
       whileHover={{ y: -6 }}
-      className="group relative rounded-2xl border overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col"
+      className="group relative rounded-2xl border overflow-hidden transition-shadow duration-300 hover:shadow-2xl flex flex-col"
       style={{
         backgroundColor: 'var(--color-card)',
         borderColor: 'var(--color-border)',

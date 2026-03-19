@@ -134,7 +134,7 @@ export default function Contacto() {
                 rel={link.url.startsWith('mailto') ? undefined : 'noopener noreferrer'}
                 whileHover={{ scale: 1.08, y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 px-5 py-3 rounded-2xl border text-sm font-medium transition-all duration-200"
+                className="flex items-center gap-2 px-5 py-3 rounded-2xl border text-sm font-medium"
                 style={{
                   backgroundColor: 'var(--color-card)',
                   borderColor: 'var(--color-border)',

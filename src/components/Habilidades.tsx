@@ -54,7 +54,7 @@ function SkillChip({ skill, index, color }: { skill: string; index: number; colo
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: index * 0.05 }}
       whileHover={{ scale: 1.1, y: -2 }}
-      className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium cursor-default select-none transition-all duration-200"
+      className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium cursor-default select-none"
       style={{
         backgroundColor: `${color}12`,
         border: `1px solid ${color}35`,
@@ -74,7 +74,7 @@ function CategoryCard({ cat, idx }: { cat: SkillCategory; idx: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: idx * 0.1 }}
-      className="rounded-2xl p-6 border transition-all duration-300 hover:shadow-xl"
+      className="rounded-2xl p-6 border transition-shadow duration-300 hover:shadow-xl"
       style={{
         backgroundColor: 'var(--color-card)',
         borderColor: 'var(--color-border)',
