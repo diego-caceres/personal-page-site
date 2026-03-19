@@ -2,35 +2,71 @@
 
 @layer base {
   :root {
-    --color-bg: #fafaf9;
-    --color-text: #1c1917;
-    --color-muted: #78716c;
-    --color-accent-1: #7c3aed;
-    --color-accent-2: #db2777;
-    --color-accent-3: #0891b2;
-    --color-card: #ffffff;
-    --color-border: #e7e5e4;
+    --font-heading: 'Fraunces', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'DM Mono', 'Fira Mono', monospace;
+
+    /* Warm off-white — slight amber tint, not pure white */
+    --color-bg: oklch(98.5% 0.01 72);
+    /* Warm near-black — never pure #000 */
+    --color-text: oklch(17% 0.02 55);
+    /* Warm mid-gray */
+    --color-muted: oklch(52% 0.03 62);
+    /* Amber — main brand, mate/sun warmth */
+    --color-accent-1: oklch(56% 0.18 44);
+    /* Deep Atlantic ocean — stormy, not tropical */
+    --color-accent-2: oklch(40% 0.09 210);
+    /* Sea green — coastal, organic */
+    --color-accent-3: oklch(50% 0.12 158);
+    /* Slightly warm card surface */
+    --color-card: oklch(100% 0.006 72);
+    /* Warm light border */
+    --color-border: oklch(89% 0.013 67);
   }
 
   .dark {
-    --color-bg: #0f0f0f;
-    --color-text: #fafaf9;
-    --color-muted: #a8a29e;
-    --color-accent-1: #a78bfa;
-    --color-accent-2: #f472b6;
-    --color-accent-3: #38bdf8;
-    --color-card: #1c1917;
-    --color-border: #292524;
+    /* Warm very dark — slight earthy tint, not pure black */
+    --color-bg: oklch(14% 0.014 60);
+    /* Warm off-white */
+    --color-text: oklch(94% 0.01 70);
+    /* Warm mid muted */
+    --color-muted: oklch(62% 0.022 65);
+    /* Bright golden — vibrant amber for dark bg */
+    --color-accent-1: oklch(74% 0.19 48);
+    /* Lighter ocean — readable on dark bg */
+    --color-accent-2: oklch(64% 0.1 210);
+    /* Lighter sea green */
+    --color-accent-3: oklch(68% 0.12 158);
+    /* Warm dark card */
+    --color-card: oklch(19% 0.016 58);
+    /* Warm dark border */
+    --color-border: oklch(26% 0.018 58);
   }
 
   * {
     scroll-behavior: smooth;
   }
 
+  /* Keyboard focus — visible ring on all interactive elements */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-1);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-body);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
@@ -75,6 +111,7 @@
     background: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
   }
 

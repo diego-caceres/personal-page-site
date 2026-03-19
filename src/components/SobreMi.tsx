@@ -39,7 +39,7 @@ export default function SobreMi() {
                 style={{ background: 'linear-gradient(to right, var(--color-accent-2), var(--color-accent-1))' }}
               />
               <span
-                className="text-xs font-mono font-medium tracking-widest uppercase"
+                className="text-xs font-medium tracking-widest uppercase"
                 style={{ color: 'var(--color-accent-2)' }}
               >
                 Sobre mí
@@ -48,18 +48,11 @@ export default function SobreMi() {
 
             <h2
               className="text-3xl md:text-4xl font-bold mb-6 leading-tight"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
+              style={{ fontFamily: 'var(--font-heading)' }}
             >
               Construyendo software
               <br />
-              <span
-                style={{
-                  background: 'linear-gradient(135deg, var(--color-accent-2), var(--color-accent-3))',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
+              <span style={{ color: 'var(--color-accent-2)' }}>
                 desde hace más de una década.
               </span>
             </h2>
@@ -85,7 +78,7 @@ export default function SobreMi() {
             </div>
 
             <div
-              className="mt-8 p-4 rounded-xl border-l-4 text-sm italic"
+              className="mt-8 p-4 rounded-xl border-l-2 text-sm italic"
               style={{
                 borderLeftColor: 'var(--color-accent-1)',
                 backgroundColor: 'var(--color-card)',
@@ -123,7 +116,7 @@ export default function SobreMi() {
 
             {/* Interest chips */}
             <div>
-              <p className="text-xs font-mono uppercase tracking-widest mb-4 text-center" style={{ color: 'var(--color-muted)' }}>
+              <p className="text-xs uppercase tracking-widest mb-4 text-center" style={{ color: 'var(--color-muted)' }}>
                 Intereses
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
@@ -131,7 +124,7 @@ export default function SobreMi() {
                   <motion.span
                     key={item.label}
                     whileHover={{ scale: 1.08, rotate: 1 }}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border transition-all duration-200 cursor-default"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border cursor-default"
                     style={{
                       backgroundColor: 'var(--color-card)',
                       borderColor: 'var(--color-border)',
@@ -159,12 +152,7 @@ export default function SobreMi() {
                 >
                   <div
                     className="text-2xl font-bold"
-                    style={{
-                      background: 'linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2))',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                    }}
+                    style={{ color: 'var(--color-accent-1)' }}
                   >
                     {stat.value}
                   </div>

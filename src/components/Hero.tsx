@@ -11,18 +11,16 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ backgroundColor: 'var(--color-bg)' }}
     >
-      {/* Background decorative blobs */}
+      {/* Dot grid texture — subtle, structural, not decorative noise */}
       <div
-        className="absolute top-20 right-0 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, var(--color-accent-1), transparent)' }}
-      />
-      <div
-        className="absolute bottom-20 left-0 w-80 h-80 rounded-full blur-3xl opacity-15 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, var(--color-accent-2), transparent)' }}
-      />
-      <div
-        className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full blur-3xl opacity-10 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, var(--color-accent-3), transparent)' }}
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle, var(--color-border) 1px, transparent 1px)',
+          backgroundSize: '28px 28px',
+          opacity: 0.8,
+          maskImage: 'radial-gradient(ellipse 80% 80% at 60% 50%, black 30%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 60% 50%, black 30%, transparent 100%)',
+        }}
       />
 
       {/* Scroll hint — pinned to bottom */}
@@ -33,7 +31,7 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
         style={{ color: 'var(--color-muted)' }}
       >
-        <span className="text-xs font-mono tracking-widest uppercase">Scroll</span>
+        <span className="text-xs tracking-widest uppercase">Scroll</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
@@ -59,7 +57,7 @@ export default function Hero() {
               style={{ background: 'linear-gradient(to right, var(--color-accent-1), var(--color-accent-2))' }}
             />
             <span
-              className="text-sm font-mono font-medium tracking-wider uppercase"
+              className="text-sm font-medium tracking-wider uppercase"
               style={{ color: 'var(--color-accent-1)' }}
             >
               Hola, soy
@@ -73,7 +71,7 @@ export default function Hero() {
             animate="animate"
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-6xl md:text-8xl font-bold leading-none mb-4 tracking-tight"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
+            style={{ fontFamily: 'var(--font-heading)' }}
           >
             Diego{' '}
             <span
@@ -112,8 +110,7 @@ export default function Hero() {
             className="text-base md:text-lg mb-10 max-w-xl leading-relaxed"
             style={{ color: 'var(--color-muted)' }}
           >
-            Construyo soluciones en la web para humanos, sistemas robustos donde la facilidad de uso, y la practicidad son importantes. Desde Montevideo,
-            Uruguay — entre commits, mate, olas y maullidos.
+            Construyo soluciones en la web para humanos, sistemas robustos donde la facilidad de uso y la practicidad son importantes. Desde Montevideo, Uruguay — entre commits, mate, olas y maullidos.
           </motion.p>
 
           {/* Links */}
@@ -144,7 +141,7 @@ export default function Hero() {
               href="https://linkedin.com/in/diegocaceres"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 hover:scale-105"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 hover:scale-105 hover:shadow-md"
               style={{
                 borderColor: 'var(--color-accent-3)',
                 color: 'var(--color-accent-3)',
@@ -159,7 +156,7 @@ export default function Hero() {
 
             <a
               href="mailto:hola@diegocaceres.dev"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 hover:scale-105"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border transition-all duration-200 hover:scale-105 hover:shadow-md"
               style={{
                 borderColor: 'var(--color-border)',
                 color: 'var(--color-text)',
