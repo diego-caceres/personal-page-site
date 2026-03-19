@@ -29,7 +29,7 @@ const projects: Project[] = [
       'App personal para gestionar ToDos, hábitos y notas. Minimalista, rápida, siempre disponible.',
     stack: ['Next.js', 'TypeScript', 'Upstash Redis', 'Tailwind CSS'],
     Icon: RiCheckboxLine,
-    gradient: 'linear-gradient(135deg, #7c3aed, #db2777)',
+    gradient: 'linear-gradient(135deg, #a86520, #d4953a)',
   },
   {
     name: 'AUA Website',
@@ -37,7 +37,7 @@ const projects: Project[] = [
       'Sitio web para la Asociación Uruguaya de Apneístas. Diseño limpio enfocado en la comunidad apneísta uruguaya.',
     stack: ['React', 'Vite', 'TypeScript', 'Tailwind CSS'],
     Icon: MdOutlinePool,
-    gradient: 'linear-gradient(135deg, #0891b2, #3b82f6)',
+    gradient: 'linear-gradient(135deg, #1a5c78, #1e7a88)',
     url: 'https://aida-uy.vercel.app/',
     repo: 'https://github.com/diego-caceres/aua-website',
   },
@@ -47,7 +47,7 @@ const projects: Project[] = [
       'Sitio web completo para una agencia de viajes de surf: información de viajes, galería de fotos, experiencias, y contacto.',
     stack: ['Next.js', 'Supabase', 'Cloudinary', 'TypeScript'],
     Icon: GiSurfBoard,
-    gradient: 'linear-gradient(135deg, #0d9488, #0891b2)',
+    gradient: 'linear-gradient(135deg, #1e7a68, #1a5c78)',
   },
   {
     name: 'Master Sales Site',
@@ -55,7 +55,7 @@ const projects: Project[] = [
       'Sitio de identidad de marca para mayorista, con catálogo de productos y backoffice para su gestión. Full-stack completo.',
     stack: ['Next.js', 'Neon', 'Cloudinary', 'TypeScript'],
     Icon: RiShoppingCart2Line,
-    gradient: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+    gradient: 'linear-gradient(135deg, #a86520, #9e3828)',
     url: 'https://www.mastersales.com.uy/',
   },
   {
@@ -64,7 +64,7 @@ const projects: Project[] = [
       'Tracker de Elo para el juego de mesa Terraforming Mars. Registra partidas, calcula rating ELO y muestra historial por jugador. Proyecto open source para mis amigos.',
     stack: ['React', 'Vite', 'Upstash Redis', 'TypeScript'],
     Icon: RiBarChartLine,
-    gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
+    gradient: 'linear-gradient(135deg, #5a4230, #a86520)',
     repo: 'https://github.com/diego-caceres/terraforming-mars-ranking',
     url: 'https://terraforming-mars-ranking.vercel.app/',
   },
@@ -74,7 +74,7 @@ const projects: Project[] = [
       'Portfolio personal para una investigadora de economía política. Diseño elegante con énfasis en su trabajo académico y publicaciones.',
     stack: ['React', 'Vite', 'TypeScript', 'CSS Modules'],
     Icon: RiBrushLine,
-    gradient: 'linear-gradient(135deg, #ec4899, #f97316)',
+    gradient: 'linear-gradient(135deg, #8c3a48, #9e3828)',
     url: 'https://belen-villegas-pla.vercel.app/about',
   },
 ];
@@ -98,14 +98,12 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
 
       <div className="p-6 flex flex-col flex-1">
         {/* Icon + name */}
-        <div className="flex items-start gap-3 mb-3">
-          <div
-            className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-            style={{ background: project.gradient }}
-          >
-            <project.Icon className="w-5 h-5 text-white" />
-          </div>
-          <h3 className="font-bold text-lg leading-tight pt-1" style={{ color: 'var(--color-text)' }}>
+        <div className="flex items-center gap-2 mb-3">
+          <project.Icon
+            className="w-4 h-4 flex-shrink-0 opacity-70"
+            style={{ color: 'var(--color-accent-1)' }}
+          />
+          <h3 className="font-bold text-lg leading-tight" style={{ color: 'var(--color-text)' }}>
             {project.name}
           </h3>
         </div>
@@ -184,23 +182,14 @@ export default function Proyectos() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-8" style={{ background: 'linear-gradient(to right, transparent, var(--color-accent-2))' }} />
-            <span className="text-xs font-mono font-medium tracking-widest uppercase" style={{ color: 'var(--color-accent-2)' }}>
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: 'var(--color-accent-2)' }}>
               Proyectos
             </span>
             <div className="h-px w-8" style={{ background: 'linear-gradient(to left, transparent, var(--color-accent-2))' }} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
             Cosas que{' '}
-            <span
-              style={{
-                background: 'linear-gradient(135deg, var(--color-accent-2), var(--color-accent-1))',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              construí
-            </span>
+            <span style={{ color: 'var(--color-accent-2)' }}>construí</span>
           </h2>
           <p className="text-base max-w-lg mx-auto" style={{ color: 'var(--color-muted)' }}>
             Algunos proyectos personales y de clientes freelance. Cada uno con su propio stack, y sus propios

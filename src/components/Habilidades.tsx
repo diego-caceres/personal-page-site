@@ -14,25 +14,25 @@ type SkillCategory = {
 const categories: SkillCategory[] = [
   {
     title: 'Frontend',
-    gradient: 'linear-gradient(135deg, #7c3aed, #db2777)',
+    gradient: 'linear-gradient(135deg, #a86520, #d4953a)',
     Icon: RiLayoutLine,
     skills: ['React', 'Next.js', 'Astro', 'TypeScript', 'JavaScript', 'Tailwind CSS', ],
   },
   {
     title: 'Backend & Datos',
-    gradient: 'linear-gradient(135deg, #0891b2, #0d9488)',
+    gradient: 'linear-gradient(135deg, #1a5c78, #1e7a68)',
     Icon: RiServerLine,
     skills: ['Python', 'Node.js', 'PostgreSQL', 'Supabase', 'Upstash Redis', 'Neon'],
   },
   {
     title: 'Infra & DevOps',
-    gradient: 'linear-gradient(135deg, #f59e0b, #ef4444)',
+    gradient: 'linear-gradient(135deg, #2a5c38, #1a5c78)',
     Icon: RiCloudLine,
     skills: ['Vercel', 'Docker', 'Kubernetes', 'CI/CD', 'Git'],
   },
   {
     title: 'Herramientas',
-    gradient: 'linear-gradient(135deg, #10b981, #3b82f6)',
+    gradient: 'linear-gradient(135deg, #5a4230, #a86520)',
     Icon: RiToolsLine,
     skills: ['Vite', 'ESLint', 'Prettier', 'Figma', 'Notion'],
   },
@@ -40,10 +40,10 @@ const categories: SkillCategory[] = [
 
 // Extract the first color from each gradient for chip border tinting
 const categoryBorderColors: Record<string, string> = {
-  'Frontend': '#7c3aed',
-  'Backend & Datos': '#0891b2',
-  'Infra & DevOps': '#f59e0b',
-  'Herramientas': '#10b981',
+  'Frontend': '#a86520',
+  'Backend & Datos': '#1a5c78',
+  'Infra & DevOps': '#2a5c38',
+  'Herramientas': '#8a6530',
 };
 
 function SkillChip({ skill, index, color }: { skill: string; index: number; color: string }) {
@@ -80,13 +80,8 @@ function CategoryCard({ cat, idx }: { cat: SkillCategory; idx: number }) {
         borderColor: 'var(--color-border)',
       }}
     >
-      <div className="flex items-center gap-3 mb-5">
-        <div
-          className="w-10 h-10 rounded-xl flex items-center justify-center"
-          style={{ background: cat.gradient }}
-        >
-          <cat.Icon className="w-5 h-5 text-white" />
-        </div>
+      <div className="flex items-center gap-2 mb-5">
+        <cat.Icon className="w-5 h-5 flex-shrink-0" style={{ color }} />
         <h3 className="font-semibold text-base" style={{ color: 'var(--color-text)' }}>
           {cat.title}
         </h3>
@@ -120,23 +115,14 @@ export default function Habilidades() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-8" style={{ background: 'linear-gradient(to right, transparent, var(--color-accent-1))' }} />
-            <span className="text-xs font-mono font-medium tracking-widest uppercase" style={{ color: 'var(--color-accent-1)' }}>
+            <span className="text-xs font-medium tracking-widest uppercase" style={{ color: 'var(--color-accent-1)' }}>
               Stack
             </span>
             <div className="h-px w-8" style={{ background: 'linear-gradient(to left, transparent, var(--color-accent-1))' }} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
             Con qué{' '}
-            <span
-              style={{
-                background: 'linear-gradient(135deg, var(--color-accent-1), var(--color-accent-3))',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              trabajo
-            </span>
+            <span style={{ color: 'var(--color-accent-1)' }}>trabajo</span>
           </h2>
           <p className="text-base max-w-lg mx-auto" style={{ color: 'var(--color-muted)' }}>
             Herramientas y tecnologías con las que suelo trabajar en mis proyectos personales y profesionales.
