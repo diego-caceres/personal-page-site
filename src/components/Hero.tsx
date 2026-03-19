@@ -11,7 +11,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ backgroundColor: 'var(--color-bg)' }}
     >
-      {/* Background decorative blobs */}
+      {/* Background decorative blobs */} 
       <div
         className="absolute top-20 right-0 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none"
         style={{ background: 'radial-gradient(circle, var(--color-accent-1), transparent)' }}
