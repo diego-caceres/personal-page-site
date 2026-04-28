@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import FloatingDice from './FloatingDice';
+import DiceBrand from './DiceBrand';
 
 const navLinks = [
   { href: '#sobre-mi', label: 'Sobre mí' },
@@ -61,12 +61,7 @@ export default function Navbar() {
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="font-mono text-sm font-medium inline-flex items-center gap-5" style={{ color: 'var(--color-accent-1)' }}>
-            <span>
-            diegocaceres<span style={{ color: 'var(--color-accent-2)' }}>.</span>dev
-            </span>
-            <FloatingDice />
-          </a>
+          <DiceBrand />
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6">

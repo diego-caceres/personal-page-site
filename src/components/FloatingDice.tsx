@@ -1,9 +1,6 @@
 const SIZE = 16;
 const HALF = SIZE / 2;
 
-const DOT_COLOR = 'var(--color-accent-1)';
-const BORDER_COLOR = 'var(--color-accent-1)';
-
 type DotPos = [number, number];
 
 const FACES: DotPos[][] = [
@@ -15,7 +12,7 @@ const FACES: DotPos[][] = [
   /* 6 */ [[0, 0], [1, 0], [2, 0], [0, 2], [1, 2], [2, 2]],
 ];
 
-function Face({ dots, transform }: { dots: DotPos[]; transform: string }) {
+function Face({ dots, transform, color }: { dots: DotPos[]; transform: string; color: string }) {
   return (
     <div
       style={{
@@ -24,7 +21,7 @@ function Face({ dots, transform }: { dots: DotPos[]; transform: string }) {
         height: SIZE,
         transform,
         backfaceVisibility: 'hidden',
-        border: `1px solid ${BORDER_COLOR}`,
+        border: `1px solid ${color}`,
         borderRadius: 4,
         display: 'grid',
         gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)',
@@ -44,14 +41,18 @@ function Face({ dots, transform }: { dots: DotPos[]; transform: string }) {
             justifyContent: 'center',
           }}
         >
-          <div style={{ width: 2, height: 2, borderRadius: '50%', backgroundColor: DOT_COLOR }} />
+          <div style={{ width: 2, height: 2, borderRadius: '50%', backgroundColor: color }} />
         </div>
       ))}
     </div>
   );
 }
 
-export default function FloatingDice() {
+interface FloatingDiceProps {
+  color?: string;
+}
+
+export default function FloatingDice({ color = 'var(--color-accent-1)' }: FloatingDiceProps) {
   return (
     <>
       <style>{`
@@ -84,12 +85,12 @@ export default function FloatingDice() {
             animation: 'rotateDice 7s linear infinite',
           }}
         >
-          <Face dots={FACES[0]} transform={`translateZ(${HALF}px)`} />
-          <Face dots={FACES[5]} transform={`rotateY(180deg) translateZ(${HALF}px)`} />
-          <Face dots={FACES[1]} transform={`rotateY(90deg) translateZ(${HALF}px)`} />
-          <Face dots={FACES[4]} transform={`rotateY(-90deg) translateZ(${HALF}px)`} />
-          <Face dots={FACES[2]} transform={`rotateX(90deg) translateZ(${HALF}px)`} />
-          <Face dots={FACES[3]} transform={`rotateX(-90deg) translateZ(${HALF}px)`} />
+          <Face dots={FACES[0]} transform={`translateZ(${HALF}px)`} color={color} />
+          <Face dots={FACES[5]} transform={`rotateY(180deg) translateZ(${HALF}px)`} color={color} />
+          <Face dots={FACES[1]} transform={`rotateY(90deg) translateZ(${HALF}px)`} color={color} />
+          <Face dots={FACES[4]} transform={`rotateY(-90deg) translateZ(${HALF}px)`} color={color} />
+          <Face dots={FACES[2]} transform={`rotateX(90deg) translateZ(${HALF}px)`} color={color} />
+          <Face dots={FACES[3]} transform={`rotateX(-90deg) translateZ(${HALF}px)`} color={color} />
         </div>
       </div>
     </>
