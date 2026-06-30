@@ -1,9 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "astro",
-  "rewrites": [
-    { "source": "/simulador", "destination": "https://retirement-investment-simulator.vercel.app/simulador" },
-    { "source": "/simulador/:path*", "destination": "https://retirement-investment-simulator.vercel.app/simulador/:path*" }
-  ]
+  "framework": "astro"
 }

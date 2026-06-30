@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Embed the deployed simulator from its own origin (vercel) instead of
+// reverse-proxying it. The proxy (a Vercel rewrite) served the app under the
+// diegocaceres.dev origin, which gave it a *separate* localStorage bucket — so
+// saved scenarios couldn't be shared with the other sites that embed it. As a
+// real cross-origin iframe, the app runs at the vercel origin and can use the
+// Storage Access API (allow="storage-access") to reach its shared,
+// unpartitioned localStorage, keeping scenarios in sync across every embed.
+const SIMULATOR_URL = 'https://retirement-investment-simulator.vercel.app/simulador';
+---
+
+<Layout
+  title="Simulador de inversiones — Diego Cáceres"
+  description="Simulador de interés compuesto y proyección de retiro."
+>
+  <iframe
+    src={SIMULATOR_URL}
+    title="Simulador de inversiones"
+    allow="clipboard-write; storage-access"
+    class="fixed inset-0 h-screen w-screen border-0"
+  ></iframe>
+</Layout>
