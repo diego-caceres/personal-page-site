@@ -38,7 +38,7 @@ const projects: Project[] = [
     stack: ['React', 'Vite', 'TypeScript', 'Tailwind CSS'],
     Icon: MdOutlinePool,
     gradient: 'linear-gradient(135deg, #1a5c78, #1e7a88)',
-    url: 'https://aida-uy.vercel.app/',
+    url: 'https://aua-apnea.uy/',
     repo: 'https://github.com/diego-caceres/aua-website',
   },
   {
@@ -48,6 +48,7 @@ const projects: Project[] = [
     stack: ['Next.js', 'Supabase', 'Cloudinary', 'TypeScript'],
     Icon: GiSurfBoard,
     gradient: 'linear-gradient(135deg, #1e7a68, #1a5c78)',
+    url: 'https://integralsurf.com.uy/',
   },
   {
     name: 'Master Sales Site',
