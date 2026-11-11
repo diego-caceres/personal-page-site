@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { RiLayoutLine, RiServerLine, RiCloudLine, RiToolsLine } from 'react-icons/ri';
+import { RiLayoutLine, RiServerLine, RiCloudLine, RiToolsLine, RiBrainLine, RiDatabase2Line } from 'react-icons/ri';
 import type { IconType } from 'react-icons';
 
 type SkillCategory = {
@@ -16,13 +16,25 @@ const categories: SkillCategory[] = [
     title: 'Frontend',
     gradient: 'linear-gradient(135deg, #a86520, #d4953a)',
     Icon: RiLayoutLine,
-    skills: ['React', 'Next.js', 'Astro', 'TypeScript', 'JavaScript', 'Tailwind CSS', ],
+    skills: ['React', 'Next.js', 'Astro', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Design Systems'],
   },
   {
     title: 'Backend & Datos',
     gradient: 'linear-gradient(135deg, #1a5c78, #1e7a68)',
     Icon: RiServerLine,
-    skills: ['Python', 'Node.js', 'PostgreSQL', 'Supabase', 'Upstash Redis', 'Neon'],
+    skills: ['Python', 'Django', 'Node.js', 'REST APIs', 'PostgreSQL', 'Supabase', 'Upstash Redis', 'Neon'],
+  },
+  {
+    title: 'IA & Machine Learning',
+    gradient: 'linear-gradient(135deg, #9e3858, #b84e60)',
+    Icon: RiBrainLine,
+    skills: ['LLMs', 'Prompt Engineering', 'RAG', 'NLP', 'OpenAI API', 'Hugging Face'],
+  },
+  {
+    title: 'Data Engineering',
+    gradient: 'linear-gradient(135deg, #1e7a68, #2a6e50)',
+    Icon: RiDatabase2Line,
+    skills: ['Pandas', 'Apache Airflow', 'dbt', 'BigQuery', 'Spark'],
   },
   {
     title: 'Infra & DevOps',
@@ -42,6 +54,8 @@ const categories: SkillCategory[] = [
 const categoryBorderColors: Record<string, string> = {
   'Frontend': '#a86520',
   'Backend & Datos': '#1a5c78',
+  'IA & Machine Learning': '#9e3858',
+  'Data Engineering': '#1e7a68',
   'Infra & DevOps': '#2a5c38',
   'Herramientas': '#8a6530',
 };
